@@ -26,6 +26,12 @@ sp-core = { default-features = false, version = "4.0.0-dev", git = "https://gith
 sp-io = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", tag = "devhub/latest" }
 sp-runtime = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", tag = "devhub/latest" }
 
+[dependencies.sp-std]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+tag = 'devhub/latest'
+version = '4.0.0-dev'
+
 [features]
 default = ["std"]
 std = [
@@ -34,6 +40,7 @@ std = [
 	"frame-support/std",
 	"frame-system/std",
 	"frame-benchmarking/std",
+	"sp-std/std",
 ]
 
 runtime-benchmarks = ["frame-benchmarking/runtime-benchmarks"]
